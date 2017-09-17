@@ -1,27 +1,41 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-//import Logic from './Logic.js';
+import {easyComp} from 'react-easy-state';
+
+
 
 class App extends Component {
+  store = {
+    inputting: "",
+  };
+  
+onChange(ev){
+  this.store.inputting = ev.target.value; 
+}
+
   render() {
+    const {onChange} = this;
+    const {inputting} = this.store;
     return (
       <div className="App">
         <div className="App-header">
           <h2>ToDo List</h2>
         </div>
-<logic>
+
 <form>
   <label>
     ToDo:
-    <input type="text" name="name" />
+    <input type="text" name="name" value = {inputting} onChange {onChange} />
   </label>
   <input type="submit" value="Submit" />
 </form>
-</logic>
+<div>{this.props.ToDo}</div>
+
       </div>
     );
+
   }
 }
 
-export default App;
+export default easyComp(App);
