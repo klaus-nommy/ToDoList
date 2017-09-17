@@ -8,6 +8,10 @@ import {easyComp} from 'react-easy-state';
 class App extends Component {
   store = {
     inputting: "",
+    todos:[
+      "test1",
+      "test2"
+    ]
   };
   
   onChange(ev){
@@ -31,7 +35,12 @@ class App extends Component {
             <input type="submit" value="Submit" />
         </form>
 
-      </div>
+for (var i = 0; i < todos.length; i ++){
+  console.log(todos[i]);
+}
+  
+}
+</div>
     );
 
   }
