@@ -10,9 +10,9 @@ class App extends Component {
     inputting: "",
   };
   
-onChange(ev){
-  this.store.inputting = ev.target.value; 
-}
+  onChange(ev){
+    this.store.inputting = ev.target.value; 
+  }
 
   render() {
     const {onChange} = this;
@@ -23,13 +23,13 @@ onChange(ev){
           <h2>ToDo List</h2>
         </div>
 
-<form>
-  <label>
-    ToDo:
-    <input type="text" name="name" value={inputting} onChange={onChange} />
-  </label>
-  <input type="submit" value="Submit" />
-</form>
+        <form>
+          <label>
+             ToDo:
+            <input type="text" name="name" value={inputting} onChange={onChange} />
+          </label>
+            <input type="submit" value="Submit" />
+        </form>
 
       </div>
     );
