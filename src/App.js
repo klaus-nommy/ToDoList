@@ -26,11 +26,10 @@ onChange(ev){
 <form>
   <label>
     ToDo:
-    <input type="text" name="name" value = {inputting} onChange {onChange} />
+    <input type="text" name="name" value={inputting} onChange={onChange} />
   </label>
   <input type="submit" value="Submit" />
 </form>
-<div>{this.props.ToDo}</div>
 
       </div>
     );
