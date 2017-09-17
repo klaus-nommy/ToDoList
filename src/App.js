@@ -21,6 +21,12 @@ class App extends Component {
   render() {
     const {onChange} = this;
     const {inputting} = this.store;
+
+    var ary = []
+
+    for(var i = 0; i < todos.length; i++)
+      todos.push(<span>{todos}</span>)
+      
     return (
       <div className="App">
         <div className="App-header">
@@ -34,10 +40,6 @@ class App extends Component {
           </label>
             <input type="submit" value="Submit" />
         </form>
-
-for (var i = 0; i < todos.length; i ++){
-  console.log(todos[i]);
-}
   
 }
 </div>
